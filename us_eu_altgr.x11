@@ -1,0 +1,75 @@
+// English US-based layout with all dead keys used by `/usr/share/X11/locale/en_US.UTF-8/Compose`
+// This should go in: /usr/share/X11/xkb/rules/evdev.xml
+// Inside: <layoutList><layout><variantList><variant>
+//
+// <variant>
+//  <configItem>
+//    <name>altgr_eu</name>
+//     <description>English (US/EU, with AltGr dead keys)</description>
+//    </configItem>
+//  </variant>
+//
+// the code below should go in: /usr/share/X11/xkb/symbols/us
+partial alphanumeric_keys modifier_keys 
+xkb_symbols "altgr_eu"  {
+ 
+        include "us(basic)"
+
+        name[Group1] = "English (US/EU, with AltGr dead keys)";
+
+        key <AB01> { [              z,                 Z,          ballotcross,              checkmark ] };
+        key <AB02> { [              x,                 X,             multiply,               division ] };
+        key <AB03> { [              c,                 C,                 cent,              copyright ] };
+        key <AB04> { [              v,                 V,            logicalor,             logicaland ] };
+        key <AB05> { [              b,                 B,                 club,                diamond ] };
+        key <AB06> { [              n,                 N,              notsign,                  heart ] };
+        key <AB07> { [              m,                 M,                   mu,                 spades ] };
+        key <AB08> { [          comma,              less,         dead_cedilla,        dead_belowcomma ] };
+        key <AB09> { [         period,           greater,        dead_abovedot,          dead_belowdot ] };
+        key <AB10> { [          slash,          question,           dead_greek,              dead_hook ] };
+
+        key <AC01> { [              a,                 A,             ellipsis,            ordfeminine ] };
+        key <AC02> { [              s,                 S,               ssharp,                section ] };
+        key <AC03> { [              d,                 D,    partialderivative,                  nabla ] };
+        key <AC04> { [              f,                 F,             function,  Greek_finalsmallsigma ] };
+        key <AC05> { [              g,                 G,  leftsinglequotemark,    leftdoublequotemark ] };
+        key <AC06> { [              h,                 H, rightsinglequotemark,   rightdoublequotemark ] };
+        key <AC07> { [              j,                 J,        guillemotleft,              brokenbar ] };
+        key <AC08> { [              k,                 K,       guillemotright,               ifonlyif ] };
+        key <AC09> { [              l,                 L,                  yen,               sterling ] };
+        key <AC10> { [      semicolon,             colon,           dead_grave,          dead_currency ] };
+        key <AC11> { [     apostrophe,          quotedbl,           dead_acute,         dead_diaeresis ] };
+
+        key <AD01> { [              q,                 Q,                thorn,                  THORN ] };
+        key <AD02> { [              w,                 W,                  eth,                    ETH ] };
+        key <AD03> { [              e,                 E,            therefore,                implies ] };
+        key <AD04> { [              r,                 R,           squareroot,             registered ] };
+        key <AD05> { [              t,                 T,               dagger,              trademark ] };
+        key <AD06> { [              y,                 Y,         intersection,               includes ] };
+        key <AD07> { [              u,                 U,                union,             includedin ] };
+        key <AD08> { [              i,                 I,             infinity,               integral ] };
+        key <AD09> { [              o,                 O,               degree,              masculine ] };
+        key <AD10> { [              p,                 P,            Multi_key,              paragraph ] };
+        key <AD11> { [    bracketleft,         braceleft,     dead_doubleacute,             dead_dasia ] };
+        key <AD12> { [   bracketright,        braceright,     dead_doublegrave,             dead_psili ] };
+
+        key <AE01> { [              1,            exclam,           exclamdown,             malesymbol ] };
+        key <AE02> { [              2,                at,          twosuperior,           femalesymbol ] };
+        key <AE03> { [              3,        numbersign,        threesuperior,     dead_invertedbreve ] };
+        key <AE04> { [              4,            dollar,             currency,          dead_currency ] };
+        key <AE05> { [              5,           percent,             EuroSign,            dead_ogonek ] };
+        key <AE06> { [              6,       asciicircum,      dead_circumflex,   dead_belowcircumflex ] };
+        key <AE07> { [              7,         ampersand,            dead_horn,    dead_belowdiaeresis ] };
+        key <AE08> { [              8,          asterisk,           dead_tilde,        dead_belowtilde ] };
+        key <AE09> { [              9,         parenleft,          dead_macron,       dead_belowmacron ] };
+        key <AE10> { [              0,        parenright,       dead_abovering,         dead_belowring ] };
+        key <AE11> { [          minus,        underscore,           dead_breve,        dead_belowbreve ] };
+        key <AE12> { [          equal,              plus,           dead_caron,              plusminus ] };
+        
+        key <BKSL> { [      backslash,               bar,          dead_stroke,              dead_iota ] };
+        key <TLDE> { [          grave,        asciitilde,               hyphen,            approximate ] };
+        key <KPDL> { [      KP_Delete,        KP_Decimal,    dead_voiced_sound,  dead_semivoiced_sound ] };
+
+        include "level3(ralt_switch)"
+        include "level3(lwin_switch)"
+};
