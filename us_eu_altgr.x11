@@ -2,12 +2,14 @@
 // This should go in: /usr/share/X11/xkb/rules/evdev.xml
 // Inside: <layoutList><layout><variantList><variant>
 //
-// <variant>
-//  <configItem>
-//    <name>altgr_eu</name>
-//     <description>English (US/EU, with AltGr dead keys)</description>
-//    </configItem>
-//  </variant>
+//         <!-- LOCAL -->
+//         <variant>
+//         <configItem>
+//         <name>altgr_eu</name>
+//             <description>English (US/EU, with AltGr dead keys)</description>
+//         </configItem>
+//         </variant>
+//         <!-- /LOCAL -->
 //
 // the code below should go in: /usr/share/X11/xkb/symbols/us
 partial alphanumeric_keys modifier_keys 
@@ -21,9 +23,9 @@ xkb_symbols "altgr_eu"  {
         key <AB02> { [              x,                 X,             multiply,               division ] };
         key <AB03> { [              c,                 C,                 cent,              copyright ] };
         key <AB04> { [              v,                 V,            logicalor,             logicaland ] };
-        key <AB05> { [              b,                 B,                 club,                diamond ] };
-        key <AB06> { [              n,                 N,              notsign,                  heart ] };
-        key <AB07> { [              m,                 M,                   mu,                 spades ] };
+        key <AB05> { [              b,                 B,                 club,                  U2660 ] };
+        key <AB06> { [              n,                 N,              notsign,               approxeq ] };
+        key <AB07> { [              m,                 M,                   mu,              variation ] };
         key <AB08> { [          comma,              less,         dead_cedilla,        dead_belowcomma ] };
         key <AB09> { [         period,           greater,        dead_abovedot,          dead_belowdot ] };
         key <AB10> { [          slash,          question,           dead_greek,              dead_hook ] };
@@ -36,7 +38,7 @@ xkb_symbols "altgr_eu"  {
         key <AC06> { [              h,                 H, rightsinglequotemark,   rightdoublequotemark ] };
         key <AC07> { [              j,                 J,        guillemotleft,              brokenbar ] };
         key <AC08> { [              k,                 K,       guillemotright,               ifonlyif ] };
-        key <AC09> { [              l,                 L,                  yen,               sterling ] };
+        key <AC09> { [              l,                 L,                heart,                diamond ] };
         key <AC10> { [      semicolon,             colon,           dead_grave,          dead_currency ] };
         key <AC11> { [     apostrophe,          quotedbl,           dead_acute,         dead_diaeresis ] };
 
@@ -71,5 +73,5 @@ xkb_symbols "altgr_eu"  {
         key <KPDL> { [      KP_Delete,        KP_Decimal,    dead_voiced_sound,  dead_semivoiced_sound ] };
 
         include "level3(ralt_switch)"
-        include "level3(lwin_switch)"
+        // include "level3(lwin_switch)"
 };
